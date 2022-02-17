@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
 import ListingItem from "../components/ListingItem";
 import {
   collection,
@@ -18,8 +18,6 @@ const Offers = () => {
   const [listings, setListings] = useState(null);
   const [loading, setLoading] = useState(true);
   const [lastFetchedListing, setLastFetchListing] = useState(null);
-
-  const params = useParams();
 
   useEffect(() => {
     const fetchListings = async () => {
